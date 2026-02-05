@@ -1,0 +1,290 @@
+/* =========================
+   GLOBAL STYLES
+========================= */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f4f6f9;
+    color: #1f2937;
+}
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 40px;
+    background: linear-gradient(90deg, #4f46e5, #6366f1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+.nav-left a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    margin-right: 25px;
+}
+
+.nav-left a:hover {
+    text-decoration: underline;
+}
+
+.logout-btn {
+    background: rgba(255, 255, 255, 0.15);
+    border: none;
+    padding: 8px 16px;
+    border-radius: 8px;
+    color: white;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.logout-btn:hover {
+    background: rgba(255, 255, 255, 0.25);
+}
+
+/* =========================
+   FORM CARD (LOGIN / REGISTER / ADD)
+========================= */
+
+.form-container {
+    max-width: 420px;
+    margin: 80px auto;
+    background: #ffffff;
+    padding: 32px;
+    border-radius: 14px;
+    box-shadow: 0 14px 35px rgba(0, 0, 0, 0.1);
+}
+
+.form-container h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #1f2937;
+    font-size: 26px;
+}
+
+/* Inputs & selects */
+.form-container input,
+.form-container select {
+    width: 100%;
+    padding: 10px 12px;
+    border-radius: 8px;
+    border: 1px solid #d1d5db;
+    font-size: 15px;
+    transition: all 0.2s ease;
+}
+
+.form-container input:focus,
+.form-container select:focus {
+    border-color: #4f46e5;
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(79, 70, 229, 0.15);
+}
+
+/* =========================
+   REGISTER & LOGIN FORMS
+========================= */
+
+.register-form p {
+    margin-bottom: 18px;
+}
+
+.register-form label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 6px;
+    color: #374151;
+}
+
+/* Django help text */
+.register-form .helptext {
+    display: block;
+    margin-top: 6px;
+    padding-left: 12px;
+    font-size: 13px;
+    color: #6b7280;
+    line-height: 1.6;
+}
+
+.register-form .helptext ul {
+    margin: 6px 0 0 0;
+    padding-left: 18px;
+}
+
+.register-form .helptext li {
+    margin-bottom: 6px;
+}
+
+/* Error messages */
+.register-form .errorlist {
+    list-style: none;
+    padding-left: 0;
+    margin: 6px 0;
+    color: #dc2626;
+    font-size: 13px;
+}
+
+.register-form .errorlist li {
+    margin-bottom: 4px;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+
+.btn-primary {
+    width: 100%;
+    margin-top: 10px;
+    padding: 12px;
+    background: linear-gradient(90deg, #4f46e5, #6366f1);
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.btn-primary:hover {
+    background: linear-gradient(90deg, #4338ca, #4f46e5);
+    transform: translateY(-1px);
+    box-shadow: 0 6px 15px rgba(79, 70, 229, 0.35);
+}
+
+/* Footer links */
+.form-footer {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 14px;
+    color: #4b5563;
+}
+
+.form-footer a {
+    color: #4f46e5;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.form-footer a:hover {
+    text-decoration: underline;
+}
+
+/* =========================
+   HOME / EXPENSE LIST PAGE
+========================= */
+
+.page-wrapper {
+    display: flex;
+    justify-content: center;
+    padding: 40px 20px;
+}
+
+.page-container {
+    width: 100%;
+    max-width: 1000px;
+    background: white;
+    padding: 30px;
+    border-radius: 14px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+}
+
+.page-container h2 {
+    margin-bottom: 10px;
+    color: #1f2937;
+}
+
+.total-amount {
+    font-size: 18px;
+    font-weight: 700;
+    color: #16a34a;
+    margin-bottom: 20px;
+}
+
+/* =========================
+   TABLE
+========================= */
+
+.expense-table {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.expense-table thead {
+    background: #4f46e5;
+    color: white;
+}
+
+.expense-table th,
+.expense-table td {
+    padding: 14px;
+    text-align: center;
+}
+
+.expense-table tbody tr {
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.expense-table tbody tr:hover {
+    background: #f9fafb;
+}
+
+.empty {
+    text-align: center;
+    color: #6b7280;
+    padding: 20px;
+}
+
+/* =========================
+   ACTION BUTTONS
+========================= */
+
+.action {
+    padding: 6px 10px;
+    border-radius: 6px;
+    font-size: 14px;
+    text-decoration: none;
+    margin: 0 4px;
+}
+
+.action.edit {
+    background: #facc15;
+    color: black;
+}
+
+.action.delete {
+    background: #ef4444;
+    color: white;
+}
+
+/* =========================
+   ADD EXPENSE EXTRAS
+========================= */
+
+.form-container select {
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg width='12' height='8' viewBox='0 0 12 8' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%236b7280' stroke-width='2' fill='none'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+    background-size: 12px;
+}
+
+.form-container input[type="date"] {
+    color: #374151;
+}
+
+.form-container input::placeholder {
+    color: #9ca3af;
+}

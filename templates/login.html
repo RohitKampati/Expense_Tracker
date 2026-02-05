@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div class="form-container">
+
+    <h2>Login</h2>
+
+    <form method="post" class="register-form" autocomplete="off">
+        {% csrf_token %}
+
+        {% for field in form %}
+            <div class="form-group">
+                {{ field.label_tag }}
+
+                {% if field.name == "username" %}
+                    <input type="text"
+                           name="username"
+                           autocomplete="off"
+                           value="">
+                {% elif field.name == "password" %}
+                    <input type="password"
+                           name="password"
+                           autocomplete="new-password">
+                {% else %}
+                    {{ field }}
+                {% endif %}
+
+                {% if field.errors %}
+                    <ul class="errorlist">
+                        {% for error in field.errors %}
+                            <li>{{ error }}</li>
+                        {% endfor %}
+                    </ul>
+                {% endif %}
+            </div>
+        {% endfor %}
+
+        <button type="submit" class="btn-primary">Login</button>
+    </form>
+
+    <div class="form-footer">
+        Don’t have an account?
+        <a href="{% url 'register' %}">Register</a>
+    </div>
+
+</div>
+
+{% endblock %}

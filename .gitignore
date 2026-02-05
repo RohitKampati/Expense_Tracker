@@ -1,0 +1,25 @@
+# Django
+db.sqlite3
+*.log
+.env
+
+# Python
+__pycache__/
+*.pyc
+
+# Virtual Environments
+Django_Forms/
+env/
+venv/
+.venv/
+
+# Static collected files (optional)
+staticfiles/
+
+# IDEs
+.vscode/
+.idea/
+
+# OS
+Thumbs.db
+.DS_Store
