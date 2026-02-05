@@ -107,3 +107,15 @@ LOGOUT_REDIRECT_URL = 'login'
 LOGOUT_REDIRECT_URL = 'login'
 LOGIN_URL = 'login'
 LOGIN_REDIRECT_URL = 'expense_list'
+import os
+
+STATIC_URL = '/static/'
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
+ALLOWED_HOSTS = ['*']
+STATIC_URL = '/static/'
+STATIC_ROOT = BASE_DIR / 'staticfiles'
+LOGIN_URL = 'login'
+LOGIN_REDIRECT_URL = '/'
+LOGOUT_REDIRECT_URL = 'login'
